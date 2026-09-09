@@ -1,8 +1,14 @@
 name: ci
 on: [push, pull_request]
+
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      API_KEY: test-key
+      DEMO_MODE: "true"
+      OPENAI_API_KEY: ""
+      DATABASE_PATH: /tmp/multi-agent-runs.db
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

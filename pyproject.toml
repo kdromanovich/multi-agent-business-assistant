@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "multi-agent-business-assistant"
 version = "0.1.0"
-description = "LangGraph multi-agent assistant with human approval and MCP tools"
+description = "LangGraph multi-agent reference backend with human approval and MCP tools"
 requires-python = ">=3.12"
 dependencies = [
   "fastapi>=0.116,<1",
@@ -18,7 +18,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest>=8,<9", "ruff>=0.12,<1"]
+dev = ["pytest>=8,<9", "httpx>=0.28,<1", "ruff>=0.12,<1"]
 
 [tool.setuptools.packages.find]
 include = ["app*"]
